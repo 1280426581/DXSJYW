@@ -70,5 +70,35 @@ transform: rotate(360deg);
 	color: blue;
 }*/
 /*header结束*/
+/*轮播图开始*/
+#div1{
+		width: 1140px;
+		height: 290px;
+		overflow: hidden;
+		background:red;
+		position: relative;
+		padding-top:120px;
+	}
+	#div1 ul{
+		position: absolute;
+		left: 0;
+		top: 0;
+		transition:left 1s;
 
+		-moz-transition:left 1s; /* Firefox 4 */
 
+		-webkit-transition:left 1s; /* Safari and Chrome */
+
+		-o-transition:left 1s; /* Opera */
+	}
+	#div1 ul li{
+		float: left;
+		width: 1140px;
+		height: 290px;
+		list-style: none;
+	}
+	.arrow { cursor: pointer; display: none; line-height: 39px; text-align: center; font-size: 36px; font-weight: bold; width: 40px; height: 40px;  position: absolute; z-index: 2; top: 125px; background-color: RGBA(0,0,0,.3); color: #fff; text-decoration: none;}
+        .arrow:hover { background-color: RGBA(0,0,0,.7);}
+        #div1:hover .arrow { display: block;}
+        #prev { left: 20px;}
+        #next { right: 20px;}
