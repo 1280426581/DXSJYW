@@ -31,8 +31,18 @@
 				<li><a href=""><img src="img/77.jpg" alt=""></a></li>
 				<li><a href=""><img src="img/88.jpg" alt=""></a></li>
 			</ul>
-			<a href="javascript:;" id="prev" class="arrow">&lt;</a>
-		    <a href="javascript:;" id="next" class="arrow">&gt;</a>
+			<div id="buttons">
+		        <span index="1" class="on"></span>
+		        <span index="2"></span>
+		        <span index="3"></span>
+		        <span index="4"></span>
+		        <span index="5"></span>
+		        <span index="6"></span>
+		        <span index="7"></span>
+		        <span index="8"></span>
+    		</div>
+			<a href="javascript:;" id="prev" class="arrow"><</a>
+		    <a href="javascript:;" id="next" class="arrow">></a>
 		</div>
 	</nav>
 	
