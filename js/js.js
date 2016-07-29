@@ -1,6 +1,6 @@
 window.onload=function(){
 	// 轮播图开始
-		var div=document.getElementById('div1');
+		var div=document.getElementById('div2');
 		var ul=document.getElementsByTagName('ul')[1];
 		var li=ul.getElementsByTagName('li');
 		 var buttons = document.getElementById('buttons').getElementsByTagName('span');
@@ -21,6 +21,9 @@ window.onload=function(){
 		// 开始运动
 		var liwidth=li[0].offsetWidth*(li.length-1);
 		function startmove(offset){
+			var time=300;
+			var interval=10;
+			var speed=offset/(time/interval);
 		ul.style.left=ul.offsetLeft+offset+'px';
 		if(ul.offsetLeft<-liwidth){
 				ul.style.left=0+'px';
@@ -69,4 +72,52 @@ window.onload=function(){
         play();
         div.onmouseover=stop;
         div.onmouseout=play;
+
+
+        // 验证滑块
+        var obox=document.getElementById('huakuai');
+	var odiv=document.getElementById('div1');
+	var onext=document.getElementById("login");
+
+	var x=0;
+	var y=0;
+	obox.onmousedown=function(ev)
+	{
+		var oevent=ev||event;
+		x=oevent.clientX-obox.offsetLeft;
+	
+		odiv.onmousemove=function(ev)
+		{
+			obox.style.cursor="move";
+		var oevent=ev||event;
+		var l=oevent.clientX-x;
+		
+			if(l<0)
+			{
+				l=0;	
+			}
+			else if(l>odiv.offsetWidth-obox.offsetWidth)
+			{
+				l=odiv.offsetWidth-obox.offsetWidth;
+				odiv.style.background="#2ECC71";
+				odiv.style.color="white";
+				odiv.innerHTML="验证成功！";
+				onext.disabled=null;
+			};
+			obox.style.left=l+"px";
+		};
+
+		obox.onmouseup,document.onmouseup=function()
+		{
+		obox.style.left=0;
+		obox.style.cursor="";
+		odiv.onmousemove=null;
+		odiv.onmouseup=null;
+		};
+	};
+
+
+
+
+
 	}
