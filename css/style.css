@@ -37,9 +37,27 @@ input{
     padding: 10px ; 
     text-align: center;
 }
+.inputlargebutton{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition-duration: 0.2s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.inputlargebutton:hover{
+	-webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
+	cursor: pointer;
+}
 .inputlittlebutton{
 	width: 100px;
-    height: 20px;
+    height: 18px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -56,7 +74,20 @@ input{
 	-webkit-transform: translateY(-4px);
   transform: translateY(-4px);
 	cursor: pointer;
-	background-color: #eee;
+}
+.inputbuttoncolor1{
+	background:#1ABC9C ;
+	color: white;
+}
+.inputbuttoncolor2{
+	background:#E74C3C ;
+	color: white;
+}
+.inputbuttoncolor3{	background: #9B59B6;
+	color: white;
+}
+.inputbuttoncolor4{	background: #3498DB;
+	color: white;
 }
 /*header开始*/
 header{
@@ -175,7 +206,7 @@ nav{
 /*滑块*/
 .div1{
 	width:250px;
-	height:34px;
+	height:35px;
 	float:left;
 	margin:0 auto;
 	margin-top:10px;
@@ -195,7 +226,7 @@ nav{
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-	border-radius:2px;
+	border-radius:5px;
 	}
 #huakuai{
 	border:1px solid #A3A3A3;
@@ -207,7 +238,7 @@ nav{
 	left:0;
 	top:0;
 	cursor: default;
-	border-radius:2px;
+	border-radius:5px;
 	}
 #huakuaitext{
 	margin-left:1px;

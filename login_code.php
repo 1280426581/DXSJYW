@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <?php 
 session_start();
 
@@ -5,7 +6,7 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 $conn=mysql_connect('localhost','root','123');
 $sql="select * from user where username='".$username."' and password='".$password."'";
-$qr=mysql_db_query('db',$sql,$conn);
+$qr=mysql_db_query('dxsjyw',$sql,$conn);
 
 if($rs=mysql_fetch_object($qr))
 {

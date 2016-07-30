@@ -115,9 +115,22 @@ window.onload=function(){
 		odiv.onmouseup=null;
 		};
 	};
-
-
-
-
-
+	
 	}
+	// 检查用户名密码：
+	function check_form()
+{
+	if(form1.username.value.length<5 || form1.username.value.length>20)
+	{
+		alert("用户名必须在5-20位之间！");
+		return false;
+		}
+	else if	(form1.password.value.length<5|| form1.password.value.length>20)
+	{
+		alert("密码必须在5-20位之间！");
+		return false;
+		}
+	else
+	document.getElementById('form1').submit()
+	}
+
